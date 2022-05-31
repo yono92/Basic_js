@@ -89,3 +89,14 @@ console.log(index2);
 console.log("find");
 const index3 = todos.find((todo) => todo.id === 3);
 console.log(index3);
+
+// 필터
+
+const index4 = todos.filter((todo) => todo.done === false);
+console.log(index4);
+
+let array10 = [1, 2, 3, 5, 12, 612, 6, 123];
+array10.sort(function (a, b) {
+  return b - a;
+});
+console.log(array10);
