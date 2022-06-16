@@ -96,7 +96,16 @@ const index4 = todos.filter((todo) => todo.done === false);
 console.log(index4);
 
 let array10 = [1, 2, 3, 5, 12, 612, 6, 123];
+console.log(array10.sort());
 array10.sort(function (a, b) {
-  return b - a;
+  return a - b;
 });
 console.log(array10);
+
+const array11 = [1];
+const array11type = typeof array11;
+console.log(array11type);
+const [one, two = 2] = array11;
+
+console.log(one);
+console.log(two);
