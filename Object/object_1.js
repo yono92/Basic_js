@@ -31,11 +31,37 @@ let user4 = {
 
 /**
  * 상수 객체는 수정될 수 있다.
- * const user = {
-  name: "John"
-};
-
-user.name = "Pete"; // (*)
-
-alert(user.name); // Pete
+ * const 는 값을 고정하지만 그 내용을 고정하지는 않는다.
  */
+
+// 계산된 프로퍼티
+
+// let fruit = prompt("어떤 과일을 구매 하시겠습니까?", "apple");
+
+// let bag = {
+//   [fruit]: 5,
+// };
+
+// console.log(bag.apple);
+
+// 단축 프로퍼티
+
+function makeUser(name, age) {
+  return {
+    name: name,
+    age: age,
+  };
+}
+
+// 단축을 시킬시 아래와 같다.
+
+function makeUser2(name, age) {
+  return {
+    name,
+    age,
+  };
+}
+
+let user5 = makeUser("yoonsejong", 31);
+
+console.log(user5.name);
