@@ -6,9 +6,11 @@ const session = require("express-session");
 const dotenv = require("dotenv");
 
 dotenv.config();
+const indexRouter = require("./routes");
+const userRouter = require("./routes/user");
 const app = express();
-app.set("port", process.env.PORT || 3001);
 
+app.set("port", process.env.PORT || 3001);
 app.use(morgan("dev"));
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use(express.json());
@@ -26,6 +28,13 @@ app.use(
     name: "session-cookie",
   })
 );
+
+app.use("/", indexRouter);
+app.use("/user", userRouter);
+
+app.use((res, req, next) => {
+  res.status(404).send("Not Found");
+});
 
 const multer = require("multer");
 const fs = require("fs");
