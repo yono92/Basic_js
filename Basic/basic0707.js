@@ -17,3 +17,7 @@ sum(1, 2);
 let double = (n) => console.log(n * 2);
 
 double(100);
+
+let sayHello = () => console.log("Hello");
+
+sayHello();
