@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>오늘 할일</h1>
+<ul class="itemList">
+    <li>
+        <input type="checkbox" id="item1">
+        <label for="item1">이벤트 버블링 공부</label>
+    </li>
+    <li>
+        <input type="checkbox" id="item2">
+        <label for="item2">이벤트 버블링 공부</label>
+    </li>
+</ul>
 </body>
+<script>
+    var inputs = document.querySelectorAll('input');
+    inputs.forEach(function (input){
+        input.addEventListener('click',function (event){
+            alert('clicked');
+            console.log('clicked');
+        })
+    })
+</script>
 </html>

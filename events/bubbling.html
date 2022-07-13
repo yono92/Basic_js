@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<div class="one">
+  <div class="two">
+    <div class="three">
+        눌러봐
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+<script>
+    var divs = document.querySelectorAll('div');
+    divs.forEach(function (div) {
+        div.addEventListener('click',logEvent , {
+            capture: true,
+        })
+    });
+    function logEvent(event) {
+        console.log(event.currentTarget.className);
+    }
+</script>
+
+</html>
