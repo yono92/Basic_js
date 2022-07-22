@@ -7,3 +7,13 @@ if (str.match(regex)) {
 } else {
   console.log("이메일 양식아님");
 }
+
+let num = "123123125ㅁㄹㅇㄴㄹ8239520";
+
+const regex2 = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
+
+if (num.match(regex2)) {
+  console.log("숫자만?");
+} else {
+  console.log("숫자만이 아니다");
+}
